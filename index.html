@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mahadev Medicine Store - Medicine Delivery & Home Blood Test Collection Across Bhubaneswar">
+    <meta name="keywords" content="medicine delivery, diagnostic tests, blood tests, pharmacy, Bhubaneswar, Odisha">
+    <meta name="author" content="Mahadev Medicine Store">
+    <meta property="og:title" content="Mahadev Medicine Store - Quality Healthcare Services">
+    <meta property="og:description" content="Medicine Delivery & Home Blood Test Collection Across Bhubaneswar">
+    <meta property="og:type" content="website">
+    
+    <title>Mahadev Medicine Store - Medicine Delivery & Diagnostics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <h2>Mahadev</h2>
+                    <p>Medicine Store</p>
+                </div>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#" onclick="showPage('home')" class="nav-link">Home</a></li>
+                <li><a href="#" onclick="showPage('services')" class="nav-link">Services</a></li>
+                <li><a href="#" onclick="showPage('about')" class="nav-link">About</a></li>
+                <li><a href="#" onclick="showPage('faq')" class="nav-link">FAQ</a></li>
+                <li><a href="#" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+                <li><a href="#" onclick="goToAdmin()" class="nav-link admin-link">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- HOME PAGE -->
+        <section id="home-page" class="page active">
+            <!-- Hero Banner -->
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Mahadev Medicine Store</h1>
+                    <p class="hero-tagline">Medicine Delivery & Home Blood Test Collection Across Bhubaneswar</p>
+                    <div class="hero-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>7WJ2+J7, Dhabalahar, Odisha 752101</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>8:00 AM – 10:30 PM (Open Daily)</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>⭐ 5.0 (17 Reviews)</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Action Buttons -->
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('order-medicine')">
+                            <i class="fas fa-pills"></i> Order Medicine
+                        </button>
+                        <button class="btn btn-secondary" onclick="showPage('book-test')">
+                            <i class="fas fa-vial"></i> Book Diagnostic Test
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Information Banners -->
+            <div class="info-banners">
+                <div class="banner banner-delivery">
+                    <i class="fas fa-truck"></i>
+                    <p><strong>Free Home Delivery</strong> Across Bhubaneswar</p>
+                </div>
+                <div class="banner banner-emergency">
+                    <i class="fas fa-phone"></i>
+                    <p><strong>Emergency Medicine Support</strong> Available 24/7</p>
+                </div>
+            </div>
+
+            <!-- Services Overview -->
+            <div class="container services-overview">
+                <h2 class="section-title">Our Services</h2>
+                
+                <div class="services-grid">
+                    <!-- Pharmacy -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-prescription-bottle-medical"></i>
+                        </div>
+                        <h3>Pharmacy</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Prescription Medicines</li>
+                            <li><i class="fas fa-check"></i> OTC Medicines</li>
+                            <li><i class="fas fa-check"></i> Health Supplements</li>
+                            <li><i class="fas fa-check"></i> Medical Equipment</li>
+                        </ul>
+                    </div>
+
+                    <!-- Diagnostics -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-flask-vial"></i>
+                        </div>
+                        <h3>Diagnostic Services</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Blood Tests</li>
+                            <li><i class="fas fa-check"></i> Urine Tests</li>
+                            <li><i class="fas fa-check"></i> Thyroid Tests</li>
+                            <li><i class="fas fa-check"></i> Full Body Checkup</li>
+                        </ul>
+                    </div>
+
+                    <!-- Home Collection -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home Sample Collection</h3>
+                        <ul class="service-list">
+                            <li><i class="fas fa-check"></i> Safe & Hygienic</li>
+                            <li><i class="fas fa-check"></i> Trained Phlebotomists</li>
+                            <li><i class="fas fa-check"></i> WhatsApp Reports</li>
+                            <li><i class="fas fa-check"></i> Convenient Timing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="container reviews-section">
+                <h2 class="section-title">Customer Reviews</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Good behaviour and excellent service. All medicines available."</p>
+                        <p class="review-author">- Customer</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Very good service. Blood samples collected at minimum price."</p>
+                        <p class="review-author">- Customer</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Nice behaviour and professional staff. Highly recommended."</p>
+                        <p class="review-author">- Customer</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Best medicine store in Bhubaneswar. Always reliable!"</p>
+                        <p class="review-author">- Customer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES PAGE -->
+        <section id="services-page" class="page">
+            <div class="container">
+                <h1 class="page-title">Our Services</h1>
+                
+                <div class="services-grid">
+                    <!-- Pharmacy Services -->
+                    <div class="service-card large">
+                        <div class="service-icon large">
+                            <i class="fas fa-prescription-bottle-medical"></i>
+                        </div>
+                        <h3>Pharmacy Services</h3>
+                        <p class="service-description">We provide a wide range of medicines and health products for your healthcare needs.</p>
+                        <ul class="service-list detailed">
+                            <li>Prescription Medicines</li>
+                            <li>OTC Medicines</li>
+                            <li>Health Supplements</li>
+                            <li>Vitamins & Minerals</li>
+                            <li>Wellness Products</li>
+                            <li>Medical Devices</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" onclick="showPage('order-medicine')">Order Now</button>
+                    </div>
+
+                    <!-- Diagnostic Services -->
+                    <div class="service-card large">
+                        <div class="service-icon large">
+                            <i class="fas fa-flask-vial"></i>
+                        </div>
+                        <h3>Diagnostic Tests</h3>
+                        <p class="service-description">Comprehensive diagnostic tests with accurate results and quick turnaround time.</p>
+                        <ul class="service-list detailed">
+                            <li>Blood Tests</li>
+                            <li>Urine Tests</li>
+                            <li>Thyroid Tests</li>
+                            <li>Diabetes (HbA1c)</li>
+                            <li>Liver Function Tests</li>
+                            <li>Kidney Function Tests</li>
+                            <li>Stool Tests</li>
+                            <li>Full Body Checkup</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" onclick="showPage('book-test')">Book Test</button>
+                    </div>
+
+                    <!-- Home Collection -->
+                    <div class="service-card large">
+                        <div class="service-icon large">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home Sample Collection</h3>
+                        <p class="service-description">Safe, hygienic, and convenient sample collection at your doorstep.</p>
+                        <ul class="service-list detailed">
+                            <li>Safe & Hygienic Collection</li>
+                            <li>Trained Phlebotomists</li>
+                            <li>Expert Handling</li>
+                            <li>Proper Sample Storage</li>
+                            <li>Timely Reports</li>
+                            <li>WhatsApp Report Delivery</li>
+                            <li>Flexible Timings</li>
+                            <li>Early Morning Collections</li>
+                        </ul>
+                        <button class="btn btn-primary mt-3" onclick="showPage('book-test')">Book Collection</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORDER MEDICINE PAGE -->
+        <section id="order-medicine-page" class="page">
+            <div class="container">
+                <h1 class="page-title">Order Medicine</h1>
+                
+                <div class="info-banner info-banner-light">
+                    <i class="fas fa-info-circle"></i>
+                    <p>We deliver medicines across all areas of Bhubaneswar. Fill the form below or order directly via WhatsApp.</p>
+                </div>
+
+                <div class="form-container">
+                    <form id="medicineOrderForm" class="form-group">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="customerName">Customer Name <span class="required">*</span></label>
+                                <input type="text" id="customerName" name="customerName" required placeholder="Enter your full name">
+                                <small class="error-message" id="nameError"></small>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="customerPhone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="customerPhone" name="customerPhone" required placeholder="10-digit phone number">
+                                <small class="error-message" id="phoneError"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field full">
+                                <label for="deliveryAddress">Delivery Address <span class="required">*</span></label>
+                                <textarea id="deliveryAddress" name="deliveryAddress" required placeholder="Enter your complete delivery address" rows="3"></textarea>
+                                <small class="error-message" id="addressError"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field full">
+                                <label for="medicineRequirement">Medicine Requirement <span class="required">*</span></label>
+                                <textarea id="medicineRequirement" name="medicineRequirement" required placeholder="List medicines needed (e.g., Aspirin 500mg, Vitamin D3)" rows="4"></textarea>
+                                <small class="error-message" id="medicineError"></small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field full">
+                                <label for="prescription">Upload Prescription (Optional)</label>
+                                <div class="file-upload">
+                                    <input type="file" id="prescription" name="prescription" accept="image/*,.pdf">
+                                    <label for="prescription" class="file-label">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Click to upload or drag and drop</span>
+                                    </label>
+                                    <small class="file-info">PNG, JPG, PDF up to 5MB</small>
+                                </div>
+                                <div id="filePreview"></div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary full-width">Submit Order</button>
+                    </form>
+
+                    <div class="or-divider">OR</div>
+
+                    <a href="https://wa.me/919938591914?text=Hello%20Mahadev%20Medicine%20Store,%20I%20would%20like%20to%20order%20medicines." target="_blank" class="btn btn-whatsapp full-width">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOK DIAGNOSTIC TEST PAGE -->
+        <section id="book-test-page" class="page">
+            <div class="container">
+                <h1 class="page-title">Book Diagnostic Test</h1>
+                
+                <form id="bookTestForm" class="form-group">
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="testFullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="testFullName" name="fullName" required placeholder="Enter your full name">
+                            <small class="error-message" id="testNameError"></small>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="testPhone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="testPhone" name="phone" required placeholder="10-digit phone number">
+                            <small class="error-message" id="testPhoneError"></small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <label for="testAddress">Address <span class="required">*</span></label>
+                            <textarea id="testAddress" name="address" required placeholder="Enter your complete address" rows="3"></textarea>
+                            <small class="error-message" id="testAddressError"></small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field full">
+                            <label for="testType">Select Test <span class="required">*</span></label>
+                            <select id="testType" name="test" required>
+                                <option value="">-- Choose a test --</option>
+                                <option value="blood">Blood Test</option>
+                                <option value="urine">Urine Test</option>
+                                <option value="stool">Stool Test</option>
+                                <option value="thyroid">Thyroid Test</option>
+                                <option value="hba1c">HbA1c (Diabetes)</option>
+                                <option value="liver">Liver Function Test</option>
+                                <option value="kidney">Kidney Function Test</option>
+                                <option value="fullbody">Full Body Checkup</option>
+                            </select>
+                            <small class="error-message" id="testTypeError"></small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="testDate">Preferred Date <span class="required">*</span></label>
+                            <input type="date" id="testDate" name="date" required>
+                            <small class="error-message" id="testDateError"></small>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="collectionType">Collection Type <span class="required">*</span></label>
+                            <select id="collectionType" name="collectionType" required>
+                                <option value="">-- Choose type --</option>
+                                <option value="home">Home Sample Collection</option>
+                                <option value="store">Visit Store</option>
+                            </select>
+                            <small class="error-message" id="collectionTypeError"></small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">Book Test</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ABOUT PAGE -->
+        <section id="about-page" class="page">
+            <div class="container">
+                <h1 class="page-title">About Us</h1>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="intro-text">
+                            <strong>Mahadev Medicine Store</strong> is a trusted pharmacy and diagnostic service centre 
+                            located in Dhabalahar, Odisha. We are dedicated to providing quality healthcare services 
+                            and affordable medicines to the people of Bhubaneswar.
+                        </p>
+
+                        <h3>What We Offer</h3>
+                        <ul class="about-list">
+                            <li><strong>All Types of Medicines:</strong> Prescription and OTC medicines for all health conditions</li>
+                            <li><strong>Diagnostic Tests:</strong> Comprehensive testing services with accurate results</li>
+                            <li><strong>Home Sample Collection:</strong> Safe and hygienic collection at your doorstep</li>
+                            <li><strong>Free Home Delivery:</strong> Quick delivery across Bhubaneswar</li>
+                            <li><strong>Affordable Healthcare:</strong> Quality services at reasonable prices</li>
+                            <li><strong>Trusted Customer Support:</strong> Dedicated support team available 8 AM - 10:30 PM</li>
+                        </ul>
+
+                        <h3>Why Choose Us?</h3>
+                        <div class="why-choose-grid">
+                            <div class="feature">
+                                <i class="fas fa-star"></i>
+                                <p><strong>5.0 Star Rating</strong> - Trusted by customers</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <p><strong>Professional Staff</strong> - Trained and experienced</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <p><strong>Quality Assured</strong> - Certified and reliable</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <p><strong>Extended Hours</strong> - 8 AM to 10:30 PM daily</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT PAGE -->
+        <section id="contact-page" class="page">
+            <div class="container">
+                <h1 class="page-title">Contact Us</h1>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Address</h3>
+                            <p>7WJ2+J7, Dhabalahar<br>Odisha 752101, India</p>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Phone</h3>
+                            <p><a href="tel:+919938591914">+91 99385 91914</a></p>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="fab fa-whatsapp"></i>
+                            <h3>WhatsApp</h3>
+                            <p><a href="https://wa.me/919938591914" target="_blank">+91 99385 91914</a></p>
+                        </div>
+
+                        <div class="info-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>Business Hours</h3>
+                            <p>Monday - Sunday<br>8:00 AM - 10:30 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="tel:+919938591914" class="btn btn-call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/919938591914" target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://maps.google.com/?cid=5903046208865956472" target="_blank" class="btn btn-directions">
+                            <i class="fas fa-map"></i> Get Directions
+                        </a>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.5454745555584!2d85.89856!3d20.09619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb9a2c0d0d0d0d1%3A0x51c77de0d0d0d0d0!2sMahadev%20Medicine%20Store!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ PAGE -->
+        <section id="faq-page" class="page">
+            <div class="container">
+                <h1 class="page-title">Frequently Asked Questions</h1>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Do you deliver medicines?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we deliver medicines across all areas of Bhubaneswar. You can place your order through our website, WhatsApp, or by calling us. We ensure timely and safe delivery at your doorstep.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How do I book a blood test?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can book a blood test by filling our "Book Diagnostic Test" form on the website, or you can contact us directly on WhatsApp or phone. Choose your preferred test and collection method, and our team will contact you to confirm the appointment.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Can I upload my prescription?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, absolutely! You can upload your prescription while placing an order through our website. You can also send your prescription via WhatsApp or bring it when you visit our store.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What are your working hours?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We are open daily from 8:00 AM to 10:30 PM. You can visit our store, call us, or place orders anytime during these hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>How will I receive my diagnostic reports?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Your diagnostic reports are delivered through WhatsApp for quick and convenient access. We ensure timely report generation and secure delivery to your registered WhatsApp number.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Is the home sample collection safe?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, our home sample collection is completely safe and hygienic. We use trained and certified phlebotomists who follow all medical protocols and use sterile equipment for sample collection.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>What is the delivery time for medicines?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We strive to deliver medicines within 2-4 hours during our working hours. For emergency medicines, we offer expedited delivery. Contact us for specific delivery requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <h3>Do you provide emergency medicine support?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide emergency medicine support during our business hours (8 AM - 10:30 PM). Call or WhatsApp us immediately with your requirements, and we'll do our best to fulfill your urgent medicine needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/919938591914" class="fab fab-whatsapp" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+919938591914" class="fab fab-call" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+        <button class="fab fab-top" id="backToTop" onclick="scrollToTop()" title="Back to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Success Popups -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon success">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 id="successTitle">Success!</h2>
+            <p id="successMessage">Your request has been submitted successfully.</p>
+            <div class="modal-details" id="modalDetails"></div>
+            
+            <div class="modal-buttons">
+                <a id="whatsappNotifyBtn" href="#" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Notify via WhatsApp
+                </a>
+                <button class="btn btn-primary" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Mahadev Medicine Store. All rights reserved.</p>
+            <p>Serving Bhubaneswar with trusted medicine delivery and diagnostic services.</p>
+            <div class="footer-links">
+                <a href="#" onclick="showPage('about')">About</a>
+                <a href="#" onclick="showPage('contact')">Contact</a>
+                <a href="#" onclick="showPage('faq')">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
